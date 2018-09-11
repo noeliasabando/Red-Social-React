@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { NavbarToggler } from 'reactstrap';
 import "./Perfil.css";
+
 
 class Perfil extends Component {
   render() {
@@ -16,16 +18,16 @@ class Perfil extends Component {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-4">
                 <li class="nav-item mr-3 active">
-                  <a class="nav-link" href="perfil.html">Ver perfil</a>
+                  <a class="nav-link" href="">Ver perfil</a>
                 </li>
                 <li class="nav-item mr-3">
-                  <a class="nav-link" href="comentarios.html">Inicio</a>
+                  <a class="nav-link" href="Inicio">Inicio</a>
                 </li>
                 <li class="nav-item mr-3">
-                  <a class="nav-link" href="amigos.html">Amigos</a>
+                  <a class="nav-link" href="">Amigos</a>
                 </li>
                 <li class="nav-item mr-3">
-                  <a class="nav-link" onclick="logoutWithFirebase()" href="../src/login.html">Cerrar sesión</a>
+                  <a class="nav-link" onclick="logoutWithFirebase()" href="">Cerrar sesión</a>
                 </li>
               </ul>
             </div>
