@@ -1,0 +1,23 @@
+#contenedorPublicacion {
+  margin-top: 10px;
+  background-color: #FFF;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 14px;
+}
+
+.userName {
+  font-size: 14px;
+  font-weight: 600;
+  color: #4a4a4a;
+  margin-bottom: 5px;
+}
+
+.publicacion {
+  margin-top: 0px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #4a4a4a;
+  width: 100%;
+  max-width: 700px;
+}

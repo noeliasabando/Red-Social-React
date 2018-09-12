@@ -5,6 +5,7 @@ import Logo from "../Logo/Logo"
 
 import "./Perfil.css";
 import InfoPerfil from "../InfoPerfil/InfoPerfil";
+import PublicacionPerfil from "../PublicacionPerfil/PublicacionPerfil";
 
 class Perfil extends Component {
   render() {
@@ -13,6 +14,7 @@ class Perfil extends Component {
         <Navbar />
         <Logo />
         <InfoPerfil />
+        <PublicacionPerfil />
       </div>
     )
   }
