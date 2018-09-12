@@ -1,0 +1,25 @@
+#userImg {
+  width: 200px;
+  height: 200px;
+}
+
+#datosNombre {
+  margin-bottom: 0px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#datosMail {
+  font-size: 14px;
+}
+
+#contenedorPerfil {
+  margin-top: 0px;
+  background-color: #FFF;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+
+#datosUser {
+  color: #4a4a4a;
+}

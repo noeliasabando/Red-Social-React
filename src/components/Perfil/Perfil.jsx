@@ -4,6 +4,7 @@ import Navbar from "../Navbar/Navbar";
 import Logo from "../Logo/Logo"
 
 import "./Perfil.css";
+import InfoPerfil from "../InfoPerfil/InfoPerfil";
 
 class Perfil extends Component {
   render() {
@@ -11,6 +12,7 @@ class Perfil extends Component {
       <div >
         <Navbar />
         <Logo />
+        <InfoPerfil />
       </div>
     )
   }
