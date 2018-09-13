@@ -1,11 +1,9 @@
-import React from 'react';
-import './Login.css';
+import React, { Component } from 'react';
+import Logo2 from './Logo2';
 
-const Logo = (props) => {
-    return (
-        <img src = {props.foto} className= '' />
-    )
-}
 
 export default Logo;
+class Login extends component {
+
+}
 
