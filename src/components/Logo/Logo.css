@@ -1,0 +1,8 @@
+#logo {
+  position: absolute;
+  left: 50%;
+  margin-left: -50px !important;
+  /* 50% of your logo width */
+  display: block;
+  top: 10px;
+}
