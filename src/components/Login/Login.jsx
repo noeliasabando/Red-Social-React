@@ -4,6 +4,13 @@ import Logo2 from './Logo2';
 
 export default Logo;
 class Login extends component {
-
+    render(){
+        return(
+            <div>
+                <Logo2 />
+                <Formulario />
+            </div>
+        )
+    }
 }
 

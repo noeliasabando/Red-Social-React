@@ -1,0 +1,11 @@
+.topBox{
+    background-image: url(../../imagenesVegan/fotoIniciarSesion.jpg);
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 167px;
+    overflow: hidden;
+    z-index: 100;
+}

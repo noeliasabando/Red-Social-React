@@ -1,10 +1,12 @@
 import React from 'react';
-import './logo2.css';
+import './Logo2.css';
 //import logo from '../../img/isologotipoBlanco.png' 
 
-const Logo = (props) => {
+const logo = (props) => {
     return (
+        <div className="topBox">
         <img src = {props.foto} className= 'logoBlanco' />
+        </div>
     )
 }
 
