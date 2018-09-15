@@ -8,6 +8,7 @@ import Amigos from "./components/Amigos/Amigos";
 import Login from "./components/Login/Login";
 
 import './App.css';
+import Register from "./components/Register/Register";
 
 class App extends Component {
   render() {
@@ -17,7 +18,7 @@ class App extends Component {
           <Route exact path="/" component={Inicio} />    
           <Route path="/profile" component={Perfil} />     
           <Route path="/friends" component={Amigos} /> 
-          <Route path="/login" component={Login} />      
+          <Route path="/register" component={Register} />      
         </div>          
       </Router>
     );
