@@ -22,15 +22,16 @@ render(){
                     </div>
                     <div id="login">
                         <div>
-                            <input id="email" class="inputInicioSesion" type="email" placeholder="Correo electrónico"/>
+                            <input id="email" class="inputInicioSesion" type="email" placeholder="Correo electrónico" ref={(input) => this.emailInput = input}/>
                         </div>
                         <div>
-                            <input id="password" class="inputInicioSesion" type="password" placeholder="Contraseña"/>
+                            <input id="password" class="inputInicioSesion" type="password" placeholder="Contraseña" ref={(input) => this.contraseñaInput = input}/>
                         </div>
                         <div>
                             <p>Olvidé mi contraseña</p>
                         </div>
                         <div>
+                            
                             <input id="loginButton" class="inputInicioSesion" onclick="loginWithFirebase();" type="button" value="Iniciar sesión"/>
                         </div>
                         <div class="ingresarConCuenta">¿No tienes una cuenta?

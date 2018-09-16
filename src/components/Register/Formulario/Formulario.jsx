@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import './Formulario.css';
-
-
+import Link from '../Link/Link';
 
 class Formulario extends Component {
 constructor(){
@@ -27,7 +26,7 @@ render(){
                             </div>
                             <hr class="style1"/>
                             <div>
-                                <input class="inputRegistro" id="name" type="text" placeholder="Nombre usuario"/>
+                                <input class="inputRegistro" id="name" type="text" placeholder="Nombre usuario" ref= {(input) => this.nameInput = input}/>
                             </div>
                             <div>
                                 <input class="inputRegistro" id="email" type="email" placeholder="Correo electrónico"/>
@@ -40,7 +39,7 @@ render(){
                             </div>
                         </form>
                         <p class="ingresarConCuenta">¿Tienes una cuenta?
-                            <a class="entrar" href="login.html">Entrar</a>
+                        <Link />
                         </p>
                     </div>
                 </div>

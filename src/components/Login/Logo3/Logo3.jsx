@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './Logo3.css';
-import logo3 from "../../../img/isologotipoBlanco";
+import logo3 from "../../../img/isologotipoBlanco.png";
 
 
 class Logo3 extends Component{
