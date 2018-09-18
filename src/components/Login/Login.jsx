@@ -7,8 +7,7 @@ import Formulario2 from './Formulario2/Formulario2';
 class Login extends Component {
     render(){
         return(
-            <div>
-                
+            <div>                
                 <Formulario2 />
             </div>
         )

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Formulario from './Formulario/Formulario';
 import Logo2 from './Logo2/Logo2';
+import Link from "../Register/Link/Link"
 
 
 
