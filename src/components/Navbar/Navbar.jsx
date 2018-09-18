@@ -16,7 +16,7 @@ class Navbar extends Component {
                 <i className="fas fa-bars"></i>
               </span>
             </button>
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <div className="collapse navbar-collapse">
               <ul className="navbar-nav mr-4">
                 <li className="nav-item mr-3">
                   <NavLink className="nav-link" to="/profile">Ver perfil</NavLink>
@@ -28,7 +28,7 @@ class Navbar extends Component {
                   <NavLink className="nav-link" to="/friends" >Amigos</NavLink>
                 </li>
                 <li className="nav-item mr-3">
-                  <NavLink className="nav-link" to="/register" >Cerrar sesión</NavLink>
+                  <NavLink className="nav-link" to="/login" >Cerrar sesión</NavLink>
                 </li>
               </ul>
             </div>
