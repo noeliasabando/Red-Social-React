@@ -1,0 +1,63 @@
+
+/* --- --- CONTENIDO PRINCIPAL --- ---*/
+/* ---PUBLICAR ---*/
+
+main .contenido-principal .publicar{
+margin-bottom: 40px;
+}
+
+main .contenido-principal .publicar .foto a {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 100 px;
+    margin-top: 20px;
+}
+
+main .contenido-principal .publicar .foto img{
+    width:100%;
+}
+main .contenido-principal .publicar form textarea{
+    width:100%;
+    max-width:100%;
+    max-height: 150px;
+    min-height: 100px;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    color: #565656;
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.35);
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+main .contenido-principal .publicar form .contenedor-botones {
+    padding: 20px 0;
+    border-bottom: 1px solid #c7c8ca;
+}
+ 
+main .contenido-principal .publicar form .contenedor-botones a
+{
+    color: #8d8d8d;
+    font-size: 20 px;
+    margin-right: 10px;
+}
+main .contenido-principal .publicar form .contenedor-botones a:hover {
+    color: #e2c;
+}
+
+main .contenido-principal .publicar form button {
+border: 1px solid #e2c5bd;
+padding: 5px 30px;
+font-size: 14px;
+font-family:'Montserrat', sans-serif;
+background: linear-gradient(to bottom #e2c5,#e2c 100%);
+color: #e2c;
+border-radius:3px;
+cursor:pointer;
+
+}
+main .contenido-principal .publicar form button:hover {
+    background: linear-gradient(to bottom #e2c, #e2c5 100%);
+}

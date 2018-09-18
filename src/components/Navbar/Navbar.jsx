@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { NavbarToggler} from 'reactstrap';
 import { NavLink, withRouter}  from "react-router-dom";
 
 import "./Navbar.css";
