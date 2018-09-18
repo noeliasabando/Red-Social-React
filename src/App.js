@@ -13,6 +13,8 @@ import { faEnvelope, faFileImage,faPlay, faMusic,faHeart,faTrashAlt} from '@fort
 
 library.add(faEnvelope, faFileImage,faPlay,faMusic,faHeart,faTrashAlt);
 
+import './App.css';
+import Register from "./components/Register/Register";
 
 class App extends Component {
   render() {

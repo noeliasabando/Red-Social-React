@@ -27,7 +27,7 @@ class Navbar extends Component {
                   <NavLink className="nav-link" to="/friends" >Amigos</NavLink>
                 </li>
                 <li className="nav-item mr-3">
-                  <NavLink className="nav-link" to="/login" >Cerrar sesión</NavLink>
+                  <NavLink className="nav-link" to="/register" >Cerrar sesión</NavLink>
                 </li>
               </ul>
             </div>
