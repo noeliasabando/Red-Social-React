@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link, withRouter}  from "react-router-dom";
 import '../../Login/Logo3/Logo3';
 
 
@@ -35,7 +36,7 @@ render(){
                             <input id="loginButton" class="inputInicioSesion" onclick="loginWithFirebase();" type="button" value="Iniciar sesión"/>
                         </div>
                         <div class="ingresarConCuenta">¿No tienes una cuenta?
-                            <a class="entrar" href="register.html">Regístrate</a>
+                            <Link className="nav-link registrate" to="/register" >Registrate</Link>
                         </div>
                     </div>
                 </div>
@@ -47,4 +48,4 @@ render(){
 }
 }
 
-export default Formulario2 ; 
+export default withRouter (Formulario2); 

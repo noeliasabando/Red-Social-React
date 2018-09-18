@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import './Formulario.css';
-import Link from '../Link/Link';
+import {Link} from "react-router-dom";
 
 class Formulario extends Component {
 constructor(){
@@ -8,7 +8,6 @@ constructor(){
     this.state = {
         items :[]
     }
-
 }
 render(){
     return (
@@ -39,7 +38,7 @@ render(){
                             </div>
                         </form>
                         <p class="ingresarConCuenta">¿Tienes una cuenta?
-                        <Link />
+                        <Link className="nav-link entrar" to="/login" >Entrar</Link>
                         </p>
                     </div>
                 </div>
