@@ -1,0 +1,60 @@
+main .publicacion {
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+main .publicacion .foto a{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 100px;
+    margin-top: 20px;
+}
+
+main .publicacion .foto img {
+    width: 100%;
+}
+
+main .publicaion .nombre {
+ font-family: 'Montserrat', sans-serif;
+ font-size: 16px;
+ line-height: 16px;
+ display: inline-block;
+ margin-bottom: 8px;
+}
+
+main .publicacion .texto{
+    background-color: #fff;
+    color: #3d3c3c;
+    font-size: 14px;
+    padding: 15px;
+    margin-bottom: 15px;
+    width:100%;
+  
+}
+
+main .publicacion .post .caja-botones {
+    margin-bottom: 20px;
+}
+
+main .publicacion .post .caja-botones button {
+background: #e2c5bd;
+color: #fff;
+cursor: pointer;
+padding: 10px, 20px;
+display: inline-block;
+font-size: 18px;
+line-height: 18px;
+border-radius:4px;
+border: none;
+}
+
+main .publicacion .post .caja-botones button:hover{
+    background: #e2c;
+}
+
+main .publicacion .post .caja-botones p{
+    margin-bottom: 0;
+    color: #e2c;
+}
