@@ -3,6 +3,7 @@ import '../../Login/Logo3/Logo3';
 
 
 
+
 class Formulario2 extends Component {
 constructor(){
     super();
@@ -35,7 +36,7 @@ render(){
                             <input id="loginButton" class="inputInicioSesion" onclick="loginWithFirebase();" type="button" value="Iniciar sesión"/>
                         </div>
                         <div class="ingresarConCuenta">¿No tienes una cuenta?
-                           // <Link className="nav-link registrate" to="/" >Registrate</Link>
+                            <Link className="nav-link registrate" to="/" >Registrate</Link>
                         </div>
                     </div>
                 </div>
