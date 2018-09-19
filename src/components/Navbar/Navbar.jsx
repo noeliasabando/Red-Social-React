@@ -21,7 +21,7 @@ class Navbar extends Component {
                   <NavLink className="nav-link" to="/profile">Ver perfil</NavLink>
                 </li>
                 <li className="nav-item mr-3">
-                  <NavLink className="nav-link" to="/">Inicio</NavLink>
+                  <NavLink className="nav-link" to="/home">Inicio</NavLink>
                 </li>
                 <li className="nav-item mr-3">
                   <NavLink className="nav-link" to="/friends" >Amigos</NavLink>
