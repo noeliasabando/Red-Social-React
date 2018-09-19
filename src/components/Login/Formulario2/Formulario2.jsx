@@ -35,7 +35,7 @@ render(){
                             <input id="loginButton" class="inputInicioSesion" onclick="loginWithFirebase();" type="button" value="Iniciar sesión"/>
                         </div>
                         <div class="ingresarConCuenta">¿No tienes una cuenta?
-                            <a class="entrar" href="register.html">Regístrate</a>
+                           // <Link className="nav-link registrate" to="/" >Registrate</Link>
                         </div>
                     </div>
                 </div>
