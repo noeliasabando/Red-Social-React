@@ -4,11 +4,11 @@ import Link from '../Link/Link';
 import fire from '../confi/Fire';
 
 class Formulario extends Component {
-constructor(){
-    super();
+constructor(props){
+    super(props);
     this.login = this.login.bind (this);
     this.handleChange = this.handleChange.bind (this);
-    this.signup = this.signup.bind (this);
+    //this.signup = this.signup.bind (this);
     this.state = {
         name: '',
         email : '',
@@ -37,34 +37,34 @@ constructor(){
     }
     render(){
         return (
-            <section class="imagenFondo">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-12 text-center">
+            <section className="imagenFondo">
+            <div className="container">
+                <div className="row">
+                    <div className="col-12 col-md-12 text-center">
                         <div id="registro">
                             <div id="msnUsuario">
                             </div>
-                            <form class="formulario">
+                            <form className="formulario">
                                 <div>
                                   
                                     <input class="botonFacebook" id="facebookButton" onclick="facebookLoginWithFirebase()" type="button" value="Iniciar sesión con Facebook"/>
                                 </div>
                                 <hr class="style1"/>
                                 <div>
-                                    <input class="inputRegistro" id="name" type="text" placeholder="Nombre usuario" ref= {(input) => this.nameInput = input}/>
+                                    <input value={this.state.name} onChange={this.handleChange} className="inputRegistro" id="name" type="text" placeholder="Nombre usuario" />
                                 </div>
                                 <div>
-                                    <input value={this.state.email} onChange= {this.handleChange} class="inputRegistro" id="email" type="email" placeholder="Correo electrónico"/>
+                                    <input value={this.state.email} onChange= {this.handleChange} className="inputRegistro" id="email" type="email" placeholder="Correo electrónico" />
                                 </div>
                                 <div>
                                     <input value={this.state.contraseña} onChange={this.handleChange} 
-                                    class="inputRegistro" id="password" type="password" placeholder="Contraseña"/>
+                                    className="inputRegistro" id="password" type="password" placeholder="Contraseña" />
                                 </div>
                                 <div>
                                     <button onClick = {this.signup} className= "botonRegistro" id= "registerButton"></button>
                                 </div>
                             </form>
-                            <p class="ingresarConCuenta">¿Tienes una cuenta?
+                            <p className="ingresarConCuenta">¿Tienes una cuenta?
                             <Link />
                             </p>
                         </div>

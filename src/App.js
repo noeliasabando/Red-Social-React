@@ -15,7 +15,7 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Route exact path="/" component={Inicio} />    
+          <Route exact path="/" component={Register} />    
           <Route path="/profile" component={Perfil} />     
           <Route path="/friends" component={Amigos} /> 
           <Route path="/login" component={Login} />      
