@@ -13,9 +13,8 @@ class Inicio extends Component {
       <div >
         <Navbar/>
         <Logo />
-        <Publicacion/> 
-        <Comentarios/>
-        <CommentPost />
+        <Publicacion/>
+        
       </div>
     )
   }
