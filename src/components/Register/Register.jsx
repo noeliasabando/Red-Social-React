@@ -52,7 +52,7 @@ class SignUpForm extends Component {
         .then(authUser => {
             this.setState({...INITIAL_STATE});
             history.push(routes.INICIO);
-            console.log('holi');
+            
            
         })
         .catch(error => {
@@ -83,7 +83,7 @@ class SignUpForm extends Component {
                 <div className="col-12 col-md-12 text-center">
             <form className="formulario" onSubmit={this.onSubmit}>
 
-            <input className="botonFacebook" id="facebookButton" onclick="facebookLoginWithFirebase()" type="button" value="Iniciar sesión con Facebook"></input>
+            <input className="botonFacebook" id="facebookButton" type="button" value="Iniciar sesión con Facebook"></input>
 
             <hr className="style1"></hr>
                 <input 
@@ -131,11 +131,11 @@ const SignUpLink = () =>
     <p>
         Don't have an account?account
         {' '}
-        <Link to={routes.REGISTER}>Sign Up</Link>
+        <Link to={routes.PERFIL}>Sign Up</Link>
     </p>
     
 
-export default withRouter(Register);
+export default withRouter (Register);
 
 export{
     SignUpForm,

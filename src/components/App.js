@@ -3,21 +3,21 @@ import React from 'react'
 import { BrowserRouter as Router, Route} from "react-router-dom";
 
 
-import Inicio from "./components/Inicio/Inicio";
-import Perfil from "./components/Perfil/Perfil";
-import Amigos from "./components/Amigos/Amigos"; 
-import Login from "./components/Login/Login";
-import Register from "./components/Register/Register";
+import Inicio from "./Inicio/Inicio";
+import Perfil from "./Perfil/Perfil";
+import Amigos from "./Amigos/Amigos"; 
+import Login from "./Login/Login";
+import Register from "./Register/Register";
 
-import * as routes from '../src/constantes/routes';
-import Navbar from '../src/components/Navbar/Navbar';
+import * as routes from '../constantes/routes';
+import Navbar from './Navbar/Navbar';
 
 const App = () =>
 <Router>
 <div>
    
 
-    <hr/>
+    
 <Route 
   exact path ={routes.AMIGOS}
   component ={Amigos}
