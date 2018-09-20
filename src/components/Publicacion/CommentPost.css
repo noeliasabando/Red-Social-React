@@ -1,0 +1,49 @@
+main .col-10 .post .comentario{
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom:1px solid #cbcbcb;
+    padding: 20px 0;
+}
+
+main .col-10 .post .comentario .foto{
+    padding-left: 0;
+    margin-right: 15px;
+}
+
+main .col-10 .post .comentario form textarea{
+   width: 100%;
+   border: 1px solid #cbcbcb;
+   color: #565656;
+   padding: 8px;
+   min-height: 40px;
+   height: 40px;
+   min-width: 100%;
+   max-width: 100;
+   font-size: 14px;
+
+}
+main .col-10 .post button {
+    border: 1px solid #e2c5bd;
+    padding: 5px 30px;
+    font-size: 14px;
+    font-family:'Montserrat', sans-serif;
+    background: linear-gradient(to bottom #e2c5,#e2c 100%);
+    color: #e2c;
+    border-radius:3px;
+    cursor:pointer;
+    
+    }
+    main .col-10 .post form button:hover {
+        background: linear-gradient(to bottom #e2c, #e2c5 100%);
+    }
+    
+
+main .col-10 .post .comentario .foto a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+
+main .col-10 .post .comentario .foto img{
+    width: 100%;
+}

@@ -1,5 +1,5 @@
 main .publicacion {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     padding: 15px;
 }
 
@@ -9,7 +9,6 @@ main .publicacion .foto a{
     height: 60px;
     overflow: hidden;
     border-radius: 100px;
-    margin-top: 20px;
 }
 
 main .publicacion .foto img {
@@ -21,17 +20,16 @@ main .publicaion .nombre {
  font-size: 16px;
  line-height: 16px;
  display: inline-block;
- margin-bottom: 8px;
+ margin-bottom: 10px;
+
 }
 
-main .publicacion .texto{
+main .publicacion .post .texto{
     background-color: #fff;
     color: #3d3c3c;
     font-size: 14px;
     padding: 15px;
     margin-bottom: 15px;
-    width:100%;
-  
 }
 
 main .publicacion .post .caja-botones {

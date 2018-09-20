@@ -6,6 +6,7 @@ import Inicio from "./components/Inicio/Inicio";
 import Perfil from "./components/Perfil/Perfil";
 import Amigos from "./components/Amigos/Amigos"; 
 import Login from "./components/Login/Login";
+import Register from "./components/Register/Register";
 
 
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -13,8 +14,7 @@ import { faEnvelope, faFileImage,faPlay, faMusic,faHeart,faTrashAlt} from '@fort
 
 library.add(faEnvelope, faFileImage,faPlay,faMusic,faHeart,faTrashAlt);
 
-import './App.css';
-import Register from "./components/Register/Register";
+
 
 class App extends Component {
   render() {
