@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route} from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect} from "react-router-dom";
+import Auth from "./Firebase/auth"
 import './App.css';
 
 import Inicio from "./components/Inicio/Inicio";
@@ -14,18 +15,16 @@ import { faEnvelope, faFileImage,faPlay, faMusic,faHeart,faTrashAlt} from '@fort
 
 library.add(faEnvelope, faFileImage,faPlay,faMusic,faHeart,faTrashAlt);
 
-
-
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <div>
-          <Route exact path="/" component={Inicio} />    
+          <Route exact path="/" component={Register} />    
+          <Route path="/login" component={Login} />    
+          <Route path="/home" component={Inicio}/>  
           <Route path="/profile" component={Perfil} />     
           <Route path="/friends" component={Amigos} /> 
-          <Route path="/login" component={Login} />    
-          <Route path="/register" component={Register} />  
         </div>          
       </Router>
     );

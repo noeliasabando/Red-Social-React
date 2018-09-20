@@ -1,14 +1,21 @@
 import React, { Component } from "react";
+import { Redirect, withRouter} from "react-router-dom"
 import Navbar from "../Navbar/Navbar";
 import Logo from "../Logo/Logo";
 import Publicacion from "../Publicacion/Publicacion";
 import Comentarios from "../Publicacion/Comentarios";
 import CommentPost from "../Publicacion/CommentPost";
+import Auth from "../../Firebase/auth";
+
 
 import "./Inicio.css";
 
 class Inicio extends Component {
   render() {
+    if (Auth.currentUser === null) {
+      return <Redirect to='/login' />
+    }
+
     return (
       <div >
         <Navbar/>
@@ -20,4 +27,4 @@ class Inicio extends Component {
   }
 }
 
-export default (Inicio);
+export default withRouter(Inicio);
