@@ -1,8 +1,5 @@
 import React, { Component } from "react";
-//import { NavbarToggler} from 'reactstrap';
 import { NavLink, withRouter}  from "react-router-dom";
-
-import * as routes from '../../constantes/routes';
 
 import "./Navbar.css";
 
@@ -18,19 +15,19 @@ class Navbar extends Component {
                 <i className="fas fa-bars"></i>
               </span>
             </button>
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <div className="collapse navbar-collapse">
               <ul className="navbar-nav mr-4">
                 <li className="nav-item mr-3">
-                  <NavLink className="nav-link" to={routes.PERFIL}>Ver perfil</NavLink>
+                  <NavLink className="nav-link" to="/profile">Ver perfil</NavLink>
                 </li>
                 <li className="nav-item mr-3">
-                  <NavLink className="nav-link" to={routes.INICIO}>Inicio</NavLink>
+                  <NavLink className="nav-link" to="/home">Inicio</NavLink>
                 </li>
                 <li className="nav-item mr-3">
-                  <NavLink className="nav-link" to={routes.AMIGOS} >Amigos</NavLink>
+                  <NavLink className="nav-link" to="/friends" >Amigos</NavLink>
                 </li>
                 <li className="nav-item mr-3">
-                  <NavLink className="nav-link" to={routes.REGISTER} >Cerrar sesión</NavLink>
+                  <NavLink className="nav-link" to="/login" >Cerrar sesión</NavLink>
                 </li>
               </ul>
             </div>
