@@ -1,12 +1,10 @@
-import React, {Component} from 'react';
-import './InfoPerfil.css';
+import React, {Component} from "react";
+import "./InfoPerfil.css";
 import UserImg from "../../img/usuaria2.png"
-import Auth from '../../Firebase/auth';
-
 
 class InfoPerfil extends Component{
   render(){
-    const user= Auth.currentUser;
+    var user= JSON.parse(localStorage.getItem("user"));
     return(
       <div className="contenedorPerfil">
         <div className="col-12 text-center">

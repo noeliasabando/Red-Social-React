@@ -1,20 +1,32 @@
-import { auth } from './firebase';
+import { auth } from "./firebase";
 
+// Sign out
+const logout = () =>{
+  localStorage.removeItem("user") 	
+  auth.signOut()
+    .then(() => {
+      console.log("Usuario finalizó su sesión");
+    })
+    .catch((error) => {
+      console.log("Error de firebase > Código > " + error.code);
+      console.log("Error de firebase > Mensaje > " + error.message);
+    });
+}
 // Sign Up
-const createUser= (username, email, password) =>
-  auth.createUserWithEmailAndPassword(email, password)
+const createUser= (username, email, password) => {
+  return new Promise( (resolve, reject)=> {
+    auth.createUserWithEmailAndPassword(email, password)
     .then((datos)=>{
       let user = auth.currentUser;
-      console.log(user)
       user.updateProfile({ displayName: username })
         .then((data) =>{
           localStorage.setItem("user", JSON.stringify(auth.currentUser))
-          return auth.currentUser
+          resolve(auth.currentUser);
         })
         .catch((error) => {
           console.log(error)
         })
-    }).catch((error) => {
+    }) .catch((error) => {
       let msn = document.getElementById("msnUsuario");
       if (error.code === "auth/email-already-in-use") {
           msn.innerHTML = "<span class='error'>Usuario registrado</span>";
@@ -26,7 +38,10 @@ const createUser= (username, email, password) =>
       if (error.code === "auth/weak-password") {
           msn.innerHTML = "<span class='error'>Debes ingresar contraseña de al menos 6 caracteres</span>";
       }
+      reject(error)
     });
+  })
+}
 
 // Sign In
 const login = (email, password) => {
@@ -42,19 +57,6 @@ const login = (email, password) => {
   })
 }
   
-
-// Sign out
-const logout = () =>{
-  localStorage.removeItem("user") 	
-  auth.signOut()
-    .then(() => {
-      console.log("Usuario finalizó su sesión");
-    })
-    .catch((error) => {
-      console.log("Error de firebase > Código > " + error.code);
-      console.log("Error de firebase > Mensaje > " + error.message);
-    });
-}
 
 
   // Password Reset
