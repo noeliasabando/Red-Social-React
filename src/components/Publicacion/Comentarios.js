@@ -4,7 +4,17 @@ import UserImg2 from "../../img/usuaria2.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class Comentarios extends Component {
-    
+  constructor(){
+      super()
+      this.state = {
+          contador:0
+      }
+  }    
+   incrementar() {
+       this.setState({
+           contador:this.state.contador + 1
+       })
+   }
     render() {
         return (
             <main>
@@ -20,9 +30,9 @@ class Comentarios extends Component {
                                 <a href="" className="nombre">Adriana Perez</a>
                                 <p className="texto">{this.props.text}</p>
                                 <div className="caja-botones d-flex justify-content-between align-items-center">
-                                    <button><FontAwesomeIcon icon="heart" /></button>
+                                    <button onClick={this.incrementar.bind(this)}><FontAwesomeIcon icon="heart" /></button>
                                     <button><FontAwesomeIcon icon="trash-alt" /></button>
-                                    <p>15 <FontAwesomeIcon icon="heart" /></p>
+                                    <p>{this.state.contador}<FontAwesomeIcon icon="heart" /></p>
                                 </div>
 
                             </div>
