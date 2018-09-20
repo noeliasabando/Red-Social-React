@@ -1,10 +1,16 @@
 import React, { Component } from "react";
 import { NavLink, withRouter}  from "react-router-dom";
+import Auth from "../../Firebase/auth";
 
 import "./Navbar.css";
 
 
 class Navbar extends Component {
+
+  handleLogout = () => {
+    Auth.logout()
+  }
+
   render() {
     return (
       <div >
@@ -27,7 +33,7 @@ class Navbar extends Component {
                   <NavLink className="nav-link" to="/friends" >Amigos</NavLink>
                 </li>
                 <li className="nav-item mr-3">
-                  <NavLink className="nav-link" to="/login" >Cerrar sesión</NavLink>
+                  <NavLink className="nav-link" onClick={this.handleLogout} to="/login" >Cerrar sesión</NavLink>
                 </li>
               </ul>
             </div>

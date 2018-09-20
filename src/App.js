@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route} from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect} from "react-router-dom";
+import Auth from "./Firebase/auth"
 import './App.css';
 
 import Inicio from "./components/Inicio/Inicio";
@@ -22,7 +23,7 @@ class App extends Component {
         <div>
           <Route exact path="/" component={Register} />    
           <Route path="/login" component={Login} />    
-          <Route path="/home" component={Inicio} />  
+          <Route path="/home" component={Inicio}/>  
           <Route path="/profile" component={Perfil} />     
           <Route path="/friends" component={Amigos} /> 
         </div>          
