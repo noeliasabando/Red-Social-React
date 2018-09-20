@@ -49,7 +49,7 @@ const App = () =>
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <div>
           <Route exact path="/" component={Register} />    
           <Route path="/login" component={Login} />    
