@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {Link, withRouter} from "react-router-dom";
 import '../../Login/Logo3/Logo3';
 
 
@@ -48,4 +49,4 @@ render(){
 }
 }
 
-export default Formulario2 ; 
+export default withRouter(Formulario2) ; 
