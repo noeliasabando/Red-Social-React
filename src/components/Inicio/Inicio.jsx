@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import Navbar from "../Navbar/Navbar";
-import Logo from "../Logo/Logo";
-import Publicacion from "../Publicacion/Publicacion";
-import Comentarios from "../Publicacion/Comentarios"
+import Logo from "../Logo/Logo"
 
 import "./Inicio.css";
 
@@ -10,10 +8,8 @@ class Inicio extends Component {
   render() {
     return (
       <div >
-        <Navbar/>
+        <Navbar />
         <Logo />
-        <Publicacion/> 
-        <Comentarios/>
       </div>
     )
   }
