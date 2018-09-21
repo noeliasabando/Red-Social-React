@@ -10,10 +10,10 @@ import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 
 
-//import { library } from '@fortawesome/fontawesome-svg-core';
-//import { faEnvelope, faFileImage,faPlay, faMusic,faHeart,faTrashAlt} from '@fortawesome/free-solid-svg-icons';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faEnvelope, faFileImage,faPlay, faMusic,faHeart,faTrashAlt} from '@fortawesome/free-solid-svg-icons';
 
-//library.add(faEnvelope, faFileImage,faPlay,faMusic,faHeart,faTrashAlt);
+library.add(faEnvelope, faFileImage,faPlay,faMusic,faHeart,faTrashAlt);
 
 
 class App extends Component {
@@ -21,13 +21,9 @@ class App extends Component {
     return (
       <Router basename={process.env.PUBLIC_URL}>
         <div>
-<<<<<<< HEAD
           <Route exact path="/" component={Register} />    
           <Route path="/login" component={Login} />    
           <Route path="/home" component={Inicio}/>  
-=======
-          <Route exact path="/" component={Inicio} />    
->>>>>>> parent of 0997bb7... rechazar
           <Route path="/profile" component={Perfil} />     
           <Route path="/friends" component={Amigos} /> 
         </div>          

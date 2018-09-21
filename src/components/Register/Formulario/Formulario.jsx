@@ -4,66 +4,35 @@ import { Link, Redirect } from "react-router-dom";
 import Auth from "../../../Firebase/auth";
 
 class Formulario extends Component {
-constructor(){
-    super();
-    this.login = this.login.bind (this);
-    this.handleChange = this.handleChange.bind (this);
-    this.signup = this.signup.bind (this);
-    this.state = {
-        name: '',
-        email : '',
-        contraseña : ''
-    };
-    }
+	constructor() {
+		super();
+		this.state = {
+			name: "",
+			email: "",
+			pasword: "",
+			loggedUser: null,
+		}
+	}
 
 	handleInputChange = (event) => {
 		const target = event.target;
 		const value = target.value;
 		const name = target.id;
 
-        }).then((u)=>{console.log(u)})
-        .catch((error)=>{
-            console.log(error + "holi soy otro hermoso error");
-        })
-    }
-    render(){
-        return (
-            <section class="imagenFondo">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-12 text-center">
-                        <div id="registro">
-                            <div id="msnUsuario">
-                            </div>
-                            <form class="formulario">
-                                <div>
-                                  
-                                    <input class="botonFacebook" id="facebookButton" onclick="facebookLoginWithFirebase()" type="button" value="Iniciar sesión con Facebook"/>
-                                </div>
-                                <hr class="style1"/>
-                                <div>
-                                    <input class="inputRegistro" id="name" type="text" placeholder="Nombre usuario" ref= {(input) => this.nameInput = input}/>
-                                </div>
-                                <div>
-                                    <input value={this.state.email} onChange= {this.handleChange} class="inputRegistro" id="email" type="email" placeholder="Correo electrónico"/>
-                                </div>
-                                <div>
-                                    <input value={this.state.contraseña} onChange={this.handleChange} 
-                                    class="inputRegistro" id="password" type="password" placeholder="Contraseña"/>
-                                </div>
-                                <div>
-                                    <button onClick = {this.signup} className= "botonRegistro" id= "registerButton"></button>
-                                </div>
-                            </form>
-                            <p class="ingresarConCuenta">¿Tienes una cuenta?
-                            <Link />
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    
-        </section>
+		this.setState({
+			[name]: value
+		});
+	}
+  
+	registerWithFirebase = () => {
+		let { name, email, password } = this.state;
+		Auth.createUser(name, email, password)
+			.then(() => {
+				this.setState({
+					loggedUser: Auth.currentUser
+				})
+			})
+	}
 
 	render() {
 		if (this.state.loggedUser !== null) {
