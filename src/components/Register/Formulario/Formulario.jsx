@@ -84,7 +84,7 @@ class Formulario extends Component {
 									</div>
 								</form>
 								<p className="ingresarConCuenta">¿Tienes una cuenta?
-                  <Link className="nav-link entrar" to="/login" >Entrar</Link>
+                  				<Link className="nav-link entrar" to="/login" >Entrar</Link>
 								</p>
 							</div>
 						</div>

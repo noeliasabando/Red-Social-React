@@ -2,16 +2,17 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.topBox {
+.topBox3 {
     background-image: url(../../../img/fotoIniciarSesion.jpg);
     background-size: cover;
     background-position: center;
     position: fixed;
     top: 0;
     width: 100%;
-    height: 167px;
+    height: 165px;
     overflow: hidden;
     z-index: 100;
+
     /* z-index es el orden de capas */
 }
 
@@ -117,4 +118,9 @@ a:hover {
 a:active {
     color: #00ADA7;
     text-decoration: none;
+}
+.logo3{
+    margin-top: 40px;
+    margin-left: 570px;
+   
 }

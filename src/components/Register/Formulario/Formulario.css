@@ -83,13 +83,17 @@ hr.style1 {
 }
 
 .ingresarConCuenta {
+    text-align: center;
     font-size: 14px;
     color: #4A4A4A;
     font-weight: 400;
     margin-top: 60px;
+    margin-left: 10px;
+
 }
 
 .entrar {
+    text-align: center;
     font-size: 14px;
     color: #00ADA7;
     font-weight: 700;
