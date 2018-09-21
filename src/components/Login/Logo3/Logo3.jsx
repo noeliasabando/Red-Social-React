@@ -6,8 +6,8 @@ import logo3 from "../../../img/isologotipoBlanco.png";
 class Logo3 extends Component{
   render(){
     return(
-      <div className="topBox">
-        <img id="logo2" src= {logo3} alt="LogoBlanco"/>
+      <div className="topBox3">
+        <img className="logo3" id="logo3" src= {logo3} alt="LogoBlanco"/>
       </div>
     )
   }

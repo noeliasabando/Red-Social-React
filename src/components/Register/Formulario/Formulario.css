@@ -2,46 +2,39 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.topBox3 {
-    background-image: url(../../../img/fotoIniciarSesion.jpg);
-    background-size: cover;
-    background-position: center;
+.topBox {
+    background-color: #00ADA7;
     position: fixed;
     top: 0;
     width: 100%;
-    height: 165px;
+    height: 120px;
     overflow: hidden;
     z-index: 100;
-
     /* z-index es el orden de capas */
 }
 
-#msnUsuario {
-    padding-top: 200px;
-    color: #4A4A4A;
-    font-size: 10px;
-}
-
-.error {
-    padding: 5px;
-    border: 1px solid #DD3C10;
-    box-sizing: border-box;
-    background-color: #FFEBE8;
-    box-shadow: none;
-}
-
-#login {
+.formulario {
     padding-top: 30px;
 }
 
-#isologo {
+#logo {
+    width: 220px;
+    height: 75px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 35px;
+    margin-top: 25px;
 }
 
-.inputInicioSesion {
+.imagenFondo {
+    background-image: url(../../../img/fotoFondo.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.inputRegistro {
+    margin-bottom: 10px;
     width: 255px;
     height: 36px;
     border: 1px solid #9B9B9B;
@@ -54,21 +47,30 @@ body {
     padding-left: 10px;
 }
 
-#email {
-    margin-bottom: 10px;
-}
-
-#password {
-    margin-bottom: 3px;
-}
-
 ::-webkit-input-placeholder {
     font-size: 14px;
     color: #9B9B9B;
     text-align: left;
 }
 
-#loginButton {
+.botonFacebook {
+    margin-bottom: 0px;
+    width: 255px;
+    height: 36px;
+    background-color: #3897F0;
+    border-radius: 6px;
+    border: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+hr.style1 {
+    border-top: 1px solid #9B9B9B;
+    width: 255px;
+}
+
+.botonRegistro {
     margin-bottom: 10px;
     width: 255px;
     height: 36px;
@@ -80,21 +82,18 @@ body {
     font-weight: 600;
 }
 
-p {
-    font-size: 11px;
-    font-weight: 300;
-    color: #4A4A4A;
-    margin-left: 138px;
-}
-
 .ingresarConCuenta {
+    text-align: center;
     font-size: 14px;
     color: #4A4A4A;
     font-weight: 400;
     margin-top: 60px;
+    margin-left: 10px;
+
 }
 
 .entrar {
+    text-align: center;
     font-size: 14px;
     color: #00ADA7;
     font-weight: 700;
@@ -119,8 +118,17 @@ a:active {
     color: #00ADA7;
     text-decoration: none;
 }
-.logo3{
-    margin-top: 40px;
-    margin-left: 570px;
-   
+
+#msnUsuario {
+    padding-top: 155px;
+    color: #4A4A4A;
+    font-size: 10px;
+}
+
+.error {
+    padding: 5px;
+    border: 1px solid #DD3C10;
+    box-sizing: border-box;
+    background-color: #FFEBE8;
+    box-shadow: none;
 }
