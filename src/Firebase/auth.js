@@ -12,34 +12,35 @@ const logout = () =>{
       console.log("Error de firebase > Mensaje > " + error.message);
     });
 }
-// Sign Up
+
 const createUser= (username, email, password) => {
   return new Promise( (resolve, reject)=> {
     auth.createUserWithEmailAndPassword(email, password)
-    .then((datos)=>{
-      let user = auth.currentUser;
-      user.updateProfile({ displayName: username })
-        .then((data) =>{
-          localStorage.setItem("user", JSON.stringify(auth.currentUser))
-          resolve(auth.currentUser);
-        })
-        .catch((error) => {
-          console.log(error)
-        })
-    }) .catch((error) => {
-      let msn = document.getElementById("msnUsuario");
-      if (error.code === "auth/email-already-in-use") {
-          msn.innerHTML = "<span class='error'>Usuario registrado</span>";
-      }
+      .then((datos)=>{
+        let user = auth.currentUser;
+        user.updateProfile({ displayName: username })
+          .then((data) =>{
+            localStorage.setItem("user", JSON.stringify(auth.currentUser))
+            resolve(auth.currentUser);
+          })
+          .catch((error) => {
+            console.log(error)
+          })
+      })
+      .catch((error) => {
+        let msn = document.getElementById("msnUsuario");
+        if (error.code === "auth/email-already-in-use") {
+            msn.innerHTML = "<span class='error'>Usuario registrado</span>";
+        }
 
-      if (error.code === "auth/invalid-email") {
-          msn.innerHTML = "<span class='error'>Debes ingresar tus datos</span>";
-      }
-      if (error.code === "auth/weak-password") {
-          msn.innerHTML = "<span class='error'>Debes ingresar contraseña de al menos 6 caracteres</span>";
-      }
-      reject(error)
-    });
+        if (error.code === "auth/invalid-email") {
+            msn.innerHTML = "<span class='error'>Debes ingresar tus datos</span>";
+        }
+        if (error.code === "auth/weak-password") {
+            msn.innerHTML = "<span class='error'>Debes ingresar contraseña de al menos 6 caracteres</span>";
+        }
+        reject(error)
+      });
   })
 }
 
@@ -47,13 +48,27 @@ const createUser= (username, email, password) => {
 const login = (email, password) => {
   return new Promise( (resolve, reject)=> {
     auth.signInWithEmailAndPassword(email, password)
-    .then((data)=>{
-      localStorage.setItem("user", JSON.stringify(auth.currentUser))
-      resolve(auth.currentUser);
-    })
-    .catch((err)=>{
-      reject(err)
-    })
+      .then((data)=>{
+        localStorage.setItem("user", JSON.stringify(auth.currentUser))
+        resolve(auth.currentUser);
+      })
+      .catch((error) => {
+        console.log("error")
+        let msn = document.getElementById("msnUsuario");
+        if (error.code === "auth/user-not-found") {
+          msn.innerHTML = "<span class='error'>Usuario no registrado</span>";
+        }
+        if (error.code === "auth/invalid-email") {
+          msn.innerHTML = "<span class='error'>Correo electrónico no válido</span>";
+        }
+
+        if (error.code === "auth/wrong-password") {
+          msn.innerHTML = "<span class='error'>Contraseña incorrecta</span>"
+        }
+        console.log("Error de firebase > Código > " + error.code);
+        console.log("Error de firebase > Mensaje > " + error.message);
+        reject(error)
+      });
   })
 }
   

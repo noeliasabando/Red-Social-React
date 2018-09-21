@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link, withRouter, Redirect } from "react-router-dom";
 import '../../Login/Logo3/Logo3';
 import Auth from "../../../Firebase/auth";
-
+import './Formulario2.css';
 
 
 class Formulario2 extends Component {
