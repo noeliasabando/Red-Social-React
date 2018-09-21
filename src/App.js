@@ -15,7 +15,6 @@ import { faEnvelope, faFileImage,faPlay, faMusic,faHeart,faTrashAlt} from '@fort
 
 library.add(faEnvelope, faFileImage,faPlay,faMusic,faHeart,faTrashAlt);
 
-
 class App extends Component {
   render() {
     return (

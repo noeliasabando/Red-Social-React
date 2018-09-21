@@ -3,8 +3,10 @@ import { Redirect, withRouter} from "react-router-dom"
 import Navbar from "../Navbar/Navbar";
 import Logo from "../Logo/Logo";
 import Publicacion from "../Publicacion/Publicacion";
-import Comentarios from "../Publicacion/Comentarios"
+import Comentarios from "../Publicacion/Comentarios";
+import CommentPost from "../Publicacion/CommentPost";
 import Auth from "../../Firebase/auth";
+
 
 import "./Inicio.css";
 
@@ -18,8 +20,8 @@ class Inicio extends Component {
       <div >
         <Navbar/>
         <Logo />
-        <Publicacion/> 
-        <Comentarios/>
+        <Publicacion/>
+        
       </div>
     )
   }
