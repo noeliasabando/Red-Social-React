@@ -21,9 +21,13 @@ class App extends Component {
     return (
       <Router basename={process.env.PUBLIC_URL}>
         <div>
+<<<<<<< HEAD
           <Route exact path="/" component={Register} />    
           <Route path="/login" component={Login} />    
           <Route path="/home" component={Inicio}/>  
+=======
+          <Route exact path="/" component={Inicio} />    
+>>>>>>> parent of 0997bb7... rechazar
           <Route path="/profile" component={Perfil} />     
           <Route path="/friends" component={Amigos} /> 
         </div>          
