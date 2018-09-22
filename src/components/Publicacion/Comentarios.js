@@ -5,28 +5,46 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 class Comentarios extends Component {
-    constructor(props){
+    
+    constructor(props) {
         super(props)
-        this.state={
-            contador:0,
-            modal: false
+        let localItems = window.localStorage.getItem('items');
+        let actualItems = (localItems !== null ? JSON.parse(localItems) : [])
+        this.state = {
+            contador: 0,
+            modal: false,
+            items: actualItems
         }
         this.toggle = this.toggle.bind(this);
-        let localItems = window.localStorage.getItem('items');
-        let actualItems = (localItems!==null? JSON.parse(localItems):[])
-        //console.log('comentarios',this.);
+        
+        
+        console.log('comentarios', this.props.items);
     }
-     incremetar(){
-         this.setState({
-             contador:this.state.contador + 1
-          })
-     }  
-
-     toggle() {
+    incremetar() {
         this.setState({
-          modal: !this.state.modal
+            contador: this.state.contador + 1
+        })
+    }
+
+    toggle() {
+        this.setState({
+            modal: !this.state.modal
         });
-      }
+    }
+
+    deleteCommentary(){
+        
+        let tempId = this.myId.props.id;
+        this.setState((previousState) => {
+           let resultTemp = previousState.items.filter(item => item.key !== tempId);
+            window.localStorage.setItem('items',JSON.stringify(resultTemp));
+            return {
+                items:resultTemp
+            }
+        });
+        this.toggle();
+        
+    }
 
     render() {
         const closeBtn = <button className="close" onClick={this.toggle}>&times;</button>;
@@ -55,15 +73,15 @@ class Comentarios extends Component {
                     </div>
                 </div>
                 <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-          <ModalHeader toggle={this.toggle} close={closeBtn}></ModalHeader>
-          <ModalBody>
-             Desea Eliminar este Mensaje.
+                    <ModalHeader toggle={this.toggle} close={closeBtn}></ModalHeader>
+                    <ModalBody> 
+                        Desea Eliminar este Mensaje.
           </ModalBody>
-          <ModalFooter>
-            <Button color="primary" onClick={this.toggle}>Eliminar</Button>{' '}
-            <Button color="secondary" onClick={this.toggle}>Cancel</Button>
-          </ModalFooter>
-        </Modal>
+                    <ModalFooter>
+                        <Button color="primary"  ref={(id) => {this.myId = id}}  id={this.props.id} onClick={this.deleteCommentary.bind(this)}>Eliminar</Button>{' '}
+                        <Button color="secondary" onClick={this.toggle}>Cancel</Button>
+                    </ModalFooter>
+                </Modal>
             </main>
 
         )
