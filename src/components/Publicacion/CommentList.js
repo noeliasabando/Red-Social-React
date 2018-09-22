@@ -10,8 +10,9 @@ class CommentList extends Component{
                 {this.props.items.map(u  => {
                     return(
                         <Comentarios
-                            key={Date.now(u)}
+                            key={u.key}
                             text={u.text}
+                            like={u.like}
                         />
                     );
                 })}

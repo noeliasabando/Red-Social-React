@@ -6,8 +6,11 @@ import FormsPublicacion from './FormsPublicacion';
 class Publicacion extends Component {
     constructor() {
         super();
+        let localItems = window.localStorage.getItem('items');
+        let actualItems = (localItems!==null? JSON.parse(localItems):[])
+        console.log(actualItems);
         this.state = {// Guardar los elementos
-            items: []
+            items: actualItems
         }
         console.log(this.state)
         this.addComment = this.addComment.bind(this);
@@ -24,24 +27,29 @@ class Publicacion extends Component {
 
         let newItem = {
             text: newComment,
-            key: Date.now()
+            key: Date.now(),
+            like:0
         }
 
         this.setState((previousState) => {
+            let temp =[newItem].concat(previousState.items); 
+            window.localStorage.setItem('items',JSON.stringify(temp));
             return {
-                items: previousState.items.concat(newItem),
+                
+                items:temp
             }
         });
         // Referencia al input
         event.target.mensaje.value = '';
-        console.log(this.state.items)
+        console.log(this.state)
+        
+
     }
     render(){
         return(
         <div>
             <FormsPublicacion onAddComent= {this.addComment.bind(this)}/>
             <CommentList items={this.state.items}/>
-
         </div>
         )
     }
