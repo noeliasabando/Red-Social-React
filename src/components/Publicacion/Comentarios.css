@@ -28,8 +28,10 @@ main .publicacion .post .texto{
     background-color: #fff;
     color: #3d3c3c;
     font-size: 14px;
+    text-align: justify;
     padding: 15px;
     margin-bottom: 15px;
+    margin-left: 0px;
 }
 
 main .publicacion .post .caja-botones {
