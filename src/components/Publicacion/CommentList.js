@@ -13,6 +13,9 @@ class CommentList extends Component{
                             key={u.key}
                             text={u.text}
                             like={u.like}
+                            id={u.key}
+                            items={this.props.items}
+                            
                         />
                     );
                 })}
