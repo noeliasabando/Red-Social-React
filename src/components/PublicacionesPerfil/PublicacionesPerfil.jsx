@@ -4,7 +4,7 @@ import PublicacionPerfil from '../PublicacionPerfil/PublicacionPerfil';
 class PublicacionesPerfil extends Component {
 
   renderMensajes(){
-    const mensajes = JSON.parse(localStorage.getItem('items'));
+    const mensajes = JSON.parse(localStorage.getItem('items')) || []
     return mensajes.map((mensaje)=>{
       return <PublicacionPerfil /* author={mensaje.key} */ text={mensaje.text} />
     })
