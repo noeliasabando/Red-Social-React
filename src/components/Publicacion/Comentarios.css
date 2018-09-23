@@ -25,6 +25,11 @@ main .publicaion .nombre {
 
 }
 
+.nombre{
+    font-size: 18px;
+    font-weight: bolder;
+}
+
 main .publicacion .post .texto{
     background-color: #fff;
     color: #3d3c3c;
