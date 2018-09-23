@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import Navbar from "../Navbar/Navbar";
 import Logo from "../Logo/Logo"
 import InfoPerfil from "../InfoPerfil/InfoPerfil";
-import PublicacionPerfil from "../PublicacionPerfil/PublicacionPerfil";
+import PublicacionesPerfil from "../PublicacionesPerfil/PublicacionesPerfil";
 
 import "./Perfil.css";
 
@@ -14,7 +14,7 @@ class Perfil extends Component {
         <Navbar />
         <Logo />
         <InfoPerfil />
-        <PublicacionPerfil />
+        <PublicacionesPerfil />
       </div>
     )
   }
