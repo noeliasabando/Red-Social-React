@@ -25,6 +25,7 @@ class Comentarios extends Component {
                                 <img id="userImg2" src={UserImg2} alt="" />
                             </a>
                         </div>
+                        
                         <div className="col">
                             <div className="post">
                                 <a href="" className="nombre">Adriana Perez</a>
