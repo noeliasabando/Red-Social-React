@@ -35,7 +35,6 @@ class Publicacion extends Component {
             let temp =[newItem].concat(previousState.items); 
             window.localStorage.setItem('items',JSON.stringify(temp));
             return {
-                
                 items:temp
             }
         });
