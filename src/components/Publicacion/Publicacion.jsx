@@ -25,7 +25,9 @@ class Publicacion extends Component {
             return;
         }
 
+        var user= JSON.parse(localStorage.getItem("user"));
         let newItem = {
+            user: user.displayName,
             text: newComment,
             key: Date.now(),
             like:0

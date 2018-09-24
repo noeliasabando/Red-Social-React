@@ -47,7 +47,7 @@ class Comentarios extends Component {
 	}
 
 	render() {
-		var user= JSON.parse(localStorage.getItem("user"));
+	 /* var user= JSON.parse(localStorage.getItem("user")); */ 
 		const closeBtn = <button className="close" onClick={this.toggle}>&times;</button>;
 		return (
 			<main>
@@ -60,7 +60,7 @@ class Comentarios extends Component {
 						</div>
 						<div className="col">
 							<div className="post">
-								<a href="" className="nombre">{user.displayName}</a>
+							  <a href="" className="nombre">{this.props.user}</a> 
 								<p className="texto">{this.props.text}</p>
 								<hr/>
 								<div className="caja-botones d-flex justify-content-between align-items-center">
