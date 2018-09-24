@@ -47,7 +47,6 @@ class Comentarios extends Component {
 	}
 
 	render() {
-	 /* var user= JSON.parse(localStorage.getItem("user")); */ 
 		const closeBtn = <button className="close" onClick={this.toggle}>&times;</button>;
 		return (
 			<main>
