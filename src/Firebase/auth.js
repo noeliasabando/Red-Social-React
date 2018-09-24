@@ -1,6 +1,5 @@
 import { auth } from "./firebase";
 
-
 const createUser= (username, email, password) => {
   return new Promise( (resolve, reject)=> {
     auth.createUserWithEmailAndPassword(email, password)
