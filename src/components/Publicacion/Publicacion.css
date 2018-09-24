@@ -1,9 +1,10 @@
 
 /* --- --- CONTENIDO PRINCIPAL --- ---*/
 /* ---PUBLICAR ---*/
-
 main .contenido-principal .publicar{
+background-color:white;
 margin-bottom: 40px;
+border-bottom:solid 10px #e2c5bd;
 }
 
 main .contenido-principal .publicar .foto a {
