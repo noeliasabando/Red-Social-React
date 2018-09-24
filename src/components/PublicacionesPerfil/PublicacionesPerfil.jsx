@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PublicacionPerfil from '../PublicacionPerfil/PublicacionPerfil';
+import '../PublicacionesPerfil/PublicacionesPerfil'
 
 class PublicacionesPerfil extends Component {
 

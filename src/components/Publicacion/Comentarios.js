@@ -62,7 +62,9 @@ class Comentarios extends Component {
 							<div className="post">
 								<a href="" className="nombre">{user.displayName}</a>
 								<p className="texto">{this.props.text}</p>
+								<hr/>
 								<div className="caja-botones d-flex justify-content-between align-items-center">
+					              
 									<button onClick={this.incremetar.bind(this)}><FontAwesomeIcon icon="heart" /></button>
 									<button onClick={this.toggle}><FontAwesomeIcon icon="trash-alt" /></button>
 									<p>{this.state.contador}<FontAwesomeIcon icon="heart" /></p>

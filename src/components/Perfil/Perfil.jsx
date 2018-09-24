@@ -10,7 +10,7 @@ import "./Perfil.css";
 class Perfil extends Component {
   render() {
     return (
-      <div >
+      <div className="fondoPerfil">
         <Navbar />
         <Logo />
         <InfoPerfil />
