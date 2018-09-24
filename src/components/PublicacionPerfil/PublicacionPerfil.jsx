@@ -5,16 +5,16 @@ import './PublicacionPerfil.css';
 
 class PublicacionPerfil extends Component{
   render(){
+    var user= JSON.parse(localStorage.getItem("user"));
     return(
-      <div className="contenedorPublicacion">
-        <div className="col-6 text-left">
-          <p className="userName">Nombre Usuario</p>
-        </div>
-        <div className="col-6 text-left">
-          <p className="publicacion">Comparto con ustedes la receta de mi desayuno durante los fines de semana. ¡Muy rica y nutritiva! Y lo más importante, todos los productos que usé son de </p>
+      <div className="contenedorPublicacion col-4 offset-4">
+        <div className="col-12 text-center">
+          <p className="userName">{user.displayName}</p> 
+        </div> 
+        <div className="">
+          <p className="publicacion">{this.props.text}</p>
         </div>
       </div>
-      
     )
   }
 }

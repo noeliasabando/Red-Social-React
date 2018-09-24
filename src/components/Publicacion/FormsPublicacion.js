@@ -10,7 +10,7 @@ class FormsPublicacion extends Component {
 
             <main>
             {/*-----------contenido Principal---------*/}
-            <div className="col contenido-principal">
+            <div className="col-12 col-md-12 text-center contenido-principal">
                 <div className="publicar">
                     <div className="row">
                         <div className="col-auto foto">

@@ -2,22 +2,26 @@ import React, { Component } from "react";
 import Comentarios from './Comentarios';
 
 
-class CommentList extends Component{
+class CommentList extends Component {
 
-    render(){
-        return(
-            <ul>
-                {this.props.items.map(u  => {
-                    return(
-                        <Comentarios
-                            key={Date.now(u)}
-                            text={u.text}
-                        />
-                    );
-                })}
-            </ul>
-        )
-    }
+	render() {
+		return (
+			<ul>
+				{this.props.items.map(u => {
+					return (
+						<Comentarios
+							key={u.key}
+							text={u.text}
+							like={u.like}
+							id={u.key}
+							items={this.props.items}
+
+						/>
+					);
+				})}
+			</ul>
+		)
+	}
 }
 
 export default CommentList;

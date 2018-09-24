@@ -9,5 +9,9 @@ pero en esta versión se trabajó con la librería React.
 
 # Link del proyecto
 
-[Vegan]()
+[Vegan](https://noeliasabando.github.io/Red-Social-React/)
+
+# Planificación de proyecto
+
+[Trello](https://trello.com/b/p1iJSwEI/proyecto-1-react)
 
