@@ -39,13 +39,14 @@ class Publicacion extends Component {
             return {
                 items:temp
             }
-        });
+        });        
         // Referencia al input
         event.target.mensaje.value = '';
-        console.log(this.state)
-        
+        console.log(this.state)       
 
     }
+
+
     render(){
         return(
         <div>

@@ -20,6 +20,7 @@ class Comentarios extends Component {
 
 		console.log('comentarios', this.props.items);
 	}
+	
 	incremetar() {
 		this.setState({
 			contador: this.state.contador + 1
