@@ -11,7 +11,7 @@ class Comentarios extends Component {
 		let localItems = window.localStorage.getItem('items');
 		let actualItems = (localItems !== null ? JSON.parse(localItems) : [])
 		this.state = {
-			contador: 0,
+			contador: actualItems[this.props.index].like,
 			modal: false,
 			items: actualItems
 		}
@@ -20,11 +20,14 @@ class Comentarios extends Component {
 
 		console.log('comentarios', this.props.items);
 	}
-	
+
 	incremetar() {
+		let estadoActual= JSON.parse(window.localStorage.getItem("items"));
 		this.setState({
 			contador: this.state.contador + 1
 		})
+		estadoActual[this.props.index].like+= 1;
+		window.localStorage.setItem("items", JSON.stringify(estadoActual));
 	}
 
 	toggle() {
@@ -60,11 +63,11 @@ class Comentarios extends Component {
 						</div>
 						<div className="col">
 							<div className="post">
-							  <a href="" className="nombre">{this.props.user}</a> 
+								<a href="" className="nombre">{this.props.user}</a>
 								<p className="texto">{this.props.text}</p>
-								<hr/>
+								<hr />
 								<div className="caja-botones d-flex justify-content-between align-items-center">
-					              
+
 									<button onClick={this.incremetar.bind(this)}><FontAwesomeIcon icon="heart" /></button>
 									<button onClick={this.toggle}><FontAwesomeIcon icon="trash-alt" /></button>
 									<p>{this.state.contador}<FontAwesomeIcon icon="heart" /></p>
