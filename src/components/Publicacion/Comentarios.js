@@ -70,7 +70,7 @@ class Comentarios extends Component {
 
 									<button onClick={this.incremetar.bind(this)}><FontAwesomeIcon icon="heart" /></button>
 									<button onClick={this.toggle}><FontAwesomeIcon icon="trash-alt" /></button>
-									<p>{this.state.contador}<FontAwesomeIcon icon="heart" /></p>
+									<p className="likes">{this.state.contador}<FontAwesomeIcon icon="heart" /></p>
 								</div>
 
 							</div>
